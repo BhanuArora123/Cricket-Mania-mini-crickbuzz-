@@ -1,0 +1,700 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Bree Serif', serif;
+    box-sizing: border-box;
+}
+button{
+    cursor: pointer;
+}
+#navbar{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid lightgrey;
+}
+#hambarNav{
+    display: none;
+}
+.hambar{
+    width: 47px;
+    height: 51%;
+    margin-right: 20px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+/* primary heading */
+.primary-head{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.6rem;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.navLinks{
+    width: 63%;
+    height:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
+}
+.navLinks div,#hambarNav div{
+    width: 20%;
+}
+.navLinks div a, #hambarNav div a{
+    width: 100%;
+    height: 100%;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+.navLinks div a:hover,#hambarNav div a:hover{
+    color: rgb(115, 198, 250);
+}
+.navLinks div,.navLinks div a,#hambarNav div a , #hambarNav div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    box-sizing: border-box;
+}
+.navLinks div:hover,#hambarNav div :hover{
+    border-bottom: 2px solid rgb(115, 198, 250);
+}
+/* sliding section  */
+#slider{
+    width: 100%;
+    height: 450px;
+    position: relative;
+    background-color: lightgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.arrowleft{
+    position: absolute;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+}
+.arrowright{
+    position: absolute;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+}
+.arrowleft,.arrowright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.2;
+    z-index: 4;
+    color: white;
+}
+.arrowleft:hover,.arrowright:hover{
+    opacity: 1;
+}
+.slidesContainer,.movingBox,.slide{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.movingBox{
+    width: 200%;
+    background-color: lightseagreen;
+    display: flex;
+    z-index: 1;
+}
+.slide{
+    width: 50%;
+    display: flex;
+}
+.slide img:after {
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0px 0px 150px 60px rgba(0,0,0,0.8);
+}
+.slide img{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: brightness(80%);
+    z-index: 2;
+    box-shadow: inset 5px 5px 10px 0px black;
+}
+.slideText{
+    position: absolute;
+    top: 111px;
+    left: 20%;
+    width: 60%;
+    font-weight: bold;
+    color: white;
+    font-size: 2rem;
+    z-index: 3;
+    text-align: center;
+}
+.btn,.btn2{
+    width: 210px;
+    height: 64px;
+    color: black;
+    position: absolute;
+    top: 345px;
+    left: 28%;
+    font-weight: bold;
+    z-index: 5;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    background-color: white;
+    box-shadow: 0px 4px rgb(197 197 197 / 86%);
+}
+.btn2{
+    left: 52%;
+}
+.btn:hover,.btn2:hover{
+    background-color: rgb(115, 198, 250);
+    box-shadow: 0px 4px rgb(71, 157, 211);
+    color: white;
+}
+/* for live score section */
+.secondary-head{
+    font-size: 2.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 79px;
+    font-family: 'Bree Serif', serif;
+}
+#liveMatches,#upcomingMatches{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+.liveScore{
+    width: 300px;
+    height: 300px;
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(115, 198, 250);
+}
+.tertiary-head{
+    font-size: 2rem;
+    margin-top: 5px;
+    font-family: 'Bree Serif', serif;
+    text-align: center;
+    width: 90%;
+}
+.caption{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: initial;
+    font-weight: bold;
+}
+/* box menu */
+.details{
+    width: 100%;
+    height:70px;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #2b5f80;
+    box-sizing: border-box;
+    display: none;
+    overflow: hidden;
+}
+.scorecard,.MOM,.summary{
+    width: 33%;
+    height: 100%;
+    border-right: 2px solid #2B5F80;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-align: center;
+}
+.summary{
+    border-right: none;
+}
+/* adding hovering effects to the box menu  */
+.scorecard:hover,.summary:hover,.MOM:hover{
+    color: rgb(115, 198, 250);
+}
+/* animation for live score box menu */
+@keyframes toggleIn{
+    from{
+        height: 0;
+    }
+    to{
+        height: 70px;
+    }
+}
+@keyframes toggleOut{
+    from{
+        height:70px;
+    }
+    to{
+        height: 0;
+    }
+}
+#playerStats{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.searchBox{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.player_info_display{
+    background-color: rgb(115, 198, 250);
+    width: 299px;
+    height: 267px;
+    margin-bottom: 5px;
+    display: grid;
+    grid-template-columns: 140px 159px;
+    grid-template-rows: 87px 50px 50px 100px;
+    grid-gap: 10px;
+}
+#player_head{
+    grid-column: 1/-1;
+    width: 96%;
+}
+.player_info_display img{
+    width: 130px;
+    height: 150px;
+    grid-column: 1/2;
+    grid-row: 2/-1;
+    margin-left: 10px;
+}
+.country{
+    font-size: 0.9rem;
+    text-align: center;
+    width: 4;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#button-box{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+}
+.info{
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    outline: none;
+    font-weight: bold;
+    border: none;
+    text-transform: uppercase;
+    background-color: white;
+    box-shadow: 0px 3px rgb(197 197 197 / 86%);
+    font-family: 'Bree Serif', serif;
+}
+/* for search box of player stats */
+#player_stats{
+    width: 300px;
+    height: 40px;
+    font-family: initial;
+    padding: 10px;
+}
+.info:hover{
+    background-color: #5D6F7A;
+    color: white;
+    box-shadow: 0px 4px #4b545a;
+}
+/* for tablets and device width less than 840px */
+@media screen and (max-width:840px){
+    .navLinks div a{
+        font-size: 0.6rem;
+    }
+    .navLinks{
+        width: 65%;
+    }
+    .primary-head{
+        font-size: 2.3rem;
+    }
+}
+@media screen and (max-width:670px){
+    .navLinks{
+        display: none;
+    }
+    .primary-head{
+        width: 70%;
+        font-size: 1.9rem;
+        justify-content: flex-start;
+        margin: 20px;
+        box-sizing: border-box;
+    }
+    #hambarNav{
+        width: 100%;
+        height: 300px;
+        display: none;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        font-weight: bold;
+    }
+    #hambarNav div{
+        width: 100%;
+        height: 20%;
+    }
+    .hambar{
+        display: flex;
+    }
+}
+.fa-minus-square{
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.fa-search{
+    position: absolute;
+    top: 95px;
+    right: 360px;
+    cursor: pointer;
+}
+footer{
+    background-color: #2B5F80;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    font-weight: bold;
+}
+/* code for tabular display in display.html */
+#matchDetails{
+    width: 100%;
+    background-color: white;
+    border: 1px solid black;
+}
+.subTable table{
+    width: 100%;
+}
+th,td{
+    border: 2px solid black;
+    text-transform: capitalize;
+}
+#params{
+    border-left: none;
+}
+.bowling ,.batting{
+    width: 40%;
+    height: 50px;
+}
+#paramTable{
+    width: 100%;
+    margin: 0;
+    border: none;
+}
+#paramTable tr,#paramTable td{
+    width: 100%;
+    border: none;
+    height: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+.subTable table tr,.subTable table tr td{
+    border: none;
+    height: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+.subTable th,#paramTable th{
+    border: none;
+    border-bottom: 2px solid black;
+}
+.scorecard1,.scorecard12,.scorecard123,.scorecard1234{
+    width: 100%;
+    background-color: white;
+}
+.scorecard1 td,.scorecard1 th,.scorecard12 td,.scorecard12 th,.scorecard123 td,.scorecard123 th,.scorecard1234 td,.scorecard1234 th{
+    border: none;
+    height: 30px;
+    text-align: center;
+}
+#scorecard-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    height: 30px;
+}
+#subDetails1{
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+#subDetails2{
+    grid-column: 1/2;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 10px;
+    align-items: center;
+}
+#subDetails3{
+    grid-column: 2/-1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
+}
+#subDetails4{
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#subDetails5{
+    grid-column: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#subDetails6{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#subDetails7{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#subDetails8{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.otherDetails{
+    width: 100%;
+    height: 243px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(5,40px);
+    background-color: #38617A;
+    color: white;
+}
+.startingLinups{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.home_team_linup,.away_team_linup{
+    width: 100%;
+    height: 100px;
+}
+.home_team_linup div,.away_team_linup div{
+    font-size: 1rem;
+    font-weight: bold;
+    width: 100%;
+    background-color: black;
+    color: white;
+    height: 30px;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 10px;
+    align-items: center;
+}
+.home_team_linup p,.away_team_linup p {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+}
+.event_id{
+    display: none;
+}
+/* design all stats display of player */
+.all_stats{
+    width: 100%;
+    height: 650px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 50px repeat(7,40px) 80px;
+    grid-gap: 20px;
+    text-transform: capitalize;
+    background-color: rgb(115, 198, 250);
+}
+#div1{
+    width: 62%;
+    height: 100%;
+    grid-column: 1/2;
+    grid-row: 2/7;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+#div1 img{
+    width: 200px;
+    height: 250px;
+}
+#player_name{
+    grid-column: 1/-1;
+    grid-row: 1/2;
+}
+#div2{
+    width:100%;
+    height: 40px;
+    grid-column: 2/-1;
+    grid-row: 2/3;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    text-align:center;
+    padding-right:50px;
+}
+#div3{
+    width: 100%;
+    height: 40px;
+    grid-column: 2/-1;
+    grid-row: 3/4;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    text-align:center;
+    padding-right:50px;
+}
+#div4{
+    width: 100%;
+    height: 40px;
+    grid-column: 2/-1;
+    grid-row: 4/5;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    text-align:center;
+    padding-right:50px;
+}
+#div5{
+    width: 100%;
+    height: 40px;
+    grid-column: 2/-1;
+    grid-row: 5/6;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    text-align:center;
+    padding-right:50px;
+}
+#div6{
+    width: 100%;
+    height: 40px;
+    grid-column: 2/-1;
+    grid-row: 6/7;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    text-align:center;
+    padding-right:50px;
+}
+#div7{
+    width: 100%;
+    height: 40px;
+    grid-column: 1/2;
+    grid-row: 7/8;
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    text-align:center;
+    padding-left: 50px;
+}
+#div8{
+    width: 100%;
+    height: 40px;
+    grid-column: 1/2;
+    grid-row: 8/9;
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    text-align:center;
+    padding-left: 50px;
+}
+#div9{
+    width: 100%;
+    height: 40px;
+    grid-column: 2/-1;
+    grid-row: 7/8;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    text-align:center;
+    padding-right:50px;
+}
+#div10{
+    width: 100%;
+    height: 40px;
+    grid-column: 2/-1;
+    grid-row: 8/9;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    text-align:center;
+    padding-right:50px;
+}
+.all_stats p{
+    width: 96%;
+    height: 150px;
+    grid-column: 1/-1;
+    grid-row:9/10;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding-left: 4%;
+}
+
+

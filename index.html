@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <title>Mini Cricbuzz</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <h1 class="primary-head"><a href="#"><span style="color: rgb(115, 198, 250);">Cric</span>ket <span
+                    style="color: rgb(115, 198, 250);">Man</span>ia</a></h1>
+        <div class="navLinks">
+            <div class="item1"><a href="#">Home</a></div>
+            <div class="item2"><a href="#">About us</a></div>
+            <div class="item3"><a href="#">Contact us</a></div>
+            <div class="item4"><a href="#">Privacy Policy</a></div>
+            <div class="item5"><a href="#">Disclaimer</a></div>
+        </div>
+        <div class="hambar" onclick="toggle()">
+            <i class="fas fa-bars fa-2x"></i>
+        </div>
+    </nav>
+    <div id="hambarNav">
+        <div class="item"><a href="#">Home</a></div>
+        <div class="item"><a href="#">About us</a></div>
+        <div class="item"><a href="#">Contact us</a></div>
+        <div class="item"><a href="#">Privacy Policy</a></div>
+        <div class="item"><a href="#">Disclaimer</a></div>
+    </div>
+    <!-- slider section -->
+    <section id="slider">
+        <div class="arrowleft" onclick="moveLeft()">
+            <i class="fas fa-arrow-circle-left fa-3x"></i>
+        </div>
+        <div class="arrowright" onclick="moveRight()">
+            <i class="fas fa-arrow-circle-right fa-3x"></i>
+        </div>
+        <div class="slidesContainer">
+            <div class="movingBox">
+                <div class="slide">
+                    <div class="slideText">
+                        <h1>Welcome to the world of cricket</h1>
+                        Get info about upcoming matches and current scorecard
+                    </div>
+                    <button class="btn">Live Matches</button>
+                    <button class="btn2">Get Notifications</button>
+                    <img src="slider1.jpg" alt="cricket mania">
+                </div>
+                <div class="slide">
+                    <div class="slideText">
+                        <h2>“Don’t play for the crowd,play for the country.”</h2> – Mahendra Singh Dhoni
+                    </div>
+                    <button class="btn">Upcoming Matches</button>
+                    <button class="btn2">Get Notifications</button>
+                    <img src="slider2.jpg" alt="cricket mania">
+                </div>
+            </div>
+        </div>
+    </section>
+    <h2 id="live-head" class="secondary-head"><span style="color: rgb(115, 198, 250);">Feat</span>ured&nbsp;<span
+            style="color: rgb(115, 198, 250);"> Mat</span>ches</h2>
+    <section id="liveMatches">
+    </section>
+    <h2 id="upcoming-head" class="secondary-head"><span style="color: rgb(115, 198, 250);">Oth</span>er&nbsp;<span
+        style="color: rgb(115, 198, 250);"> Mat</span>ches</h2>
+    <section id="upcomingMatches">
+
+    </section>
+    <h2 class="secondary-head"><span style="color: rgb(115, 198, 250);">Pla</span>yer <span
+            style="color: rgb(115, 198, 250);">&nbsp;Stat</span>istics</h2>
+    <div class="searchBox">
+        <label for="players_stats"><h6 class="tertiary-head" style="font-size: 1.3rem;">Search your favourite player and get info about him/her</h6></label>
+        <br>
+        <input type="search" name="player_info" id="player_stats" placeholder="Search your Favourite Player Stats"><i class="fas fa-search"></i>
+    </div>
+    <section id="playerStats">
+    </section>
+    <section id="chuttiya">
+    </section>
+    <footer id="foot">
+        &#169;&nbsp;Copyright 2021
+    </footer>
+    <script src="https://kit.fontawesome.com/bedf74ce64.js" crossorigin="anonymous"></script>
+    <script src="ui.js"></script>
+    <script src="fetch.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
